@@ -7,49 +7,57 @@
   text-align: center;
 }
 
-.main {
-  //vertical-align: middle;
-  width: 100%;
-  height: 90%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .content {
+// .container {
+//   height: 100vh;
+//   width: 100vw;
+//   margin: 0 auto;
+//   background-image: url(https://www.pakutaso.com/shared/img/thumb/shiroTM620GFVL3424_TP_V.jpg);
+//   background-size: cover;
+//   text-align: center;
+  .main {
+    //vertical-align: middle;
+    width: 100%;
+    height: 90%;
+    margin: 0 auto;
     display: flex;
-    .title {
-      opacity: 0.7;
-      font-size: 130px;
-      letter-spacing: 10px;
-      color: lightyellow;
-      .spring {
-        color: pink;
-      }
-      .primavera {
-        color: linen;
-        font-size: 50px;
-      }
-      .summer {
-        color: greenyellow;
-      }
-      .verano {
-        color: linen;
-        font-size: 50px;
-      }
-      .autom {
-        color: indianred;
-      }
-      .atono {
-        color: linen;
-        font-size: 50px;
-      }
-      .winter {
-        color: turquoise;
-      }
-      .invierno {
-        color: linen;
-        font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    .content {
+      display: flex;
+      .title {
+        opacity: 0.7;
+        font-size: 130px;
+        letter-spacing: 10px;
+        color: lightyellow;
+        .spring {
+          color: pink;
+        }
+        .primavera {
+          color: linen;
+          font-size: 50px;
+        }
+        .summer {
+          color: greenyellow;
+        }
+        .verano {
+          color: linen;
+          font-size: 50px;
+        }
+        .autom {
+          color: indianred;
+        }
+        .atono {
+          color: linen;
+          font-size: 50px;
+        }
+        .winter {
+          color: turquoise;
+        }
+        .invierno {
+          color: linen;
+          font-size: 50px;
+        }
       }
     }
   }
-}
+// }
