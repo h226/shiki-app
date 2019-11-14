@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order(created_at: :desc)
   end
   
   def new
@@ -11,6 +11,9 @@ class PostsController < ApplicationController
   end 
 
   def create
+    # @post = Post.new(content: params[:content])
+    # @post.save
+    redirect_to("/posts/index")
     Post.create(post_params)
   end
 
@@ -28,11 +31,12 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find_by(id: params[:id])
   end
 
   private
   def post_params
-    params.require(:post).permit(:name, :image, :text)
+    params.require(:post).permit(:nickname, :imageUrl, :text)
   end
 
   def set_post

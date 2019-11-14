@@ -8,16 +8,22 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    .header
-      - if user_signed_in?
-        .user_nav.grid-6
-          = link_to "ログアウト", destroy_user_session_path, method: :delete
-          = link_to  "投稿する", "/posts/new", class: "post"
-      - else
-        .grid-6
-          = link_to "ログイン", new_user_session_path, class: 'post'
-          = link_to "新規登録", new_user_registration_path, class: 'post'
-
+.header
+  .header-logo 
+    = link_to "Shiki", "/"
+  .about
+    = link_to "About", "/about"
+- if user_signed_in?
+  .user_nav.grid-6
+    = link_to "ログアウト", destroy_user_session_path, method: :delete
+    = link_to  "Primavera", "/posts/new", class: "post"
+    = link_to  "Verano", "/posts/new", class: "post"
+    = link_to  "Otoño", "/posts/new", class: "post"
+    = link_to  "Invierno", "/posts/new", class: "post"
+- else
+  .grid-6
+    = link_to "ログイン", new_user_session_path, class: 'post'
+    = link_to "新規登録", new_user_registration_path, class: 'post'
 
 = yield
 
