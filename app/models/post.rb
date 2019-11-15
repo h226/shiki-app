@@ -1,7 +1,8 @@
 class Post < ApplicationRecord
-  validates :text, presence: true
+  validates :title, presence: true
+  validates :image, presence: true
   def change
-    create_tabke :posts do |t|
+    create_table :posts do |t|
       t.string :name
       t.string :text
       t.text :image

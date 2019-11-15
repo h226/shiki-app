@@ -34,9 +34,21 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
   end
 
+  # def primavera
+  # end
+
+  # def verano
+  # end
+
+  # def otono
+  # end
+
+  # def invierno
+  # end
+
   private
   def post_params
-    params.require(:post).permit(:nickname, :imageUrl, :text)
+    params.require(:post).permit(:name, :image, :title)
   end
 
   def set_post
