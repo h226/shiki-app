@@ -1,5 +1,5 @@
 .contents.row
-  .container
+  .container-plus
     %h2 Log in
     = form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f|
       .field
@@ -17,3 +17,11 @@
           = f.check_box :remember_me
       .actions
         = f.submit "Log in"
+
+  -#       .form
+  -# .email
+  -#   %input{:placeholder => "EMAIL", :type => "text"}/
+  -# .password
+  -#   %input{:placeholder => "PASSWORD", :type => "text"}/
+  -# .login
+  -#   %span log in

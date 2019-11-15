@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/show'
   devise_for :users
   get "posts/index" => "posts#index"
   get "posts/new" => "posts#new"
@@ -7,6 +8,6 @@ Rails.application.routes.draw do
 
   get "/" => "home#top"
   get "about" => "home#about"
-  resources :posts, only: [:index, :new, :create]
+  # resources :posts, only: [:index, :new, :create]
 
 end
