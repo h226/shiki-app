@@ -22,6 +22,8 @@
   }
   .user_nav.grid-6 {
     float: right;
+    line-height: 20px;
+    text-align: center;
   }
   .logout {
     text-decoration: none;
@@ -45,24 +47,28 @@
     text-decoration: none;
     font-weight: bold;
     color: pink;
-    margin: 0 15px;
+    margin: 0 15px 0 500px;
+    font-size: 20px;
   }
   #verano {
     text-decoration: none;
     font-weight: bold;
     color: greenyellow;
     margin: 0 15px;
+    font-size: 20px;
   }
   #otono {
     text-decoration: none;
     font-weight: bold;
     color: indianred;
     margin: 0 15px;
+    font-size: 20px;
   }
   #invierno {
     text-decoration: none;
     font-weight: bold;
     color: turquoise;
     margin: 0 15px;
+    font-size: 20px;
   }
 }

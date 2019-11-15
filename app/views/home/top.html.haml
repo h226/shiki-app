@@ -1,4 +1,20 @@
 .container
+  -# %link{:href => "https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css", :rel => "stylesheet"}/
+  -# %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"}
+  -# %script{:src => "https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"}
+  -# :javascript
+  -#   $(document).ready(function(){
+  -#       $('.slider').bxSlider({
+  -#           auto: true,
+  -#           pause: 5000,
+  -#       });
+  -#   });
+
+  -#   .slider
+  -#   %img{:alt => "", :height => "300", :src => "gazou1.jpg", :width => "500"}/
+  -#   %img{:alt => "", :height => "300", :src => "gazou2.jpg", :width => "500"}/
+  -#   %img{:alt => "", :height => "300", :src => "gazou3.jpg", :width => "500"}/
+  -#   %img{:alt => "", :height => "300", :src => "gazou4.jpg", :width => "500"}/
   .main
     .content
       %h1.title
@@ -10,16 +26,3 @@
         %span.otono Shu
         =link_to "冬", "invierno", class: "winter"
         %span.invierno To
-  -# .header
-  -#   .header-logo 
-  -#     = link_to "Shiki", "/"
-  -#   .about
-  -#     = link_to "About", "/about"
-  -#   - if user_signed_in?
-  -#     .user_nav.grid-6
-  -#       = link_to "ログアウト", destroy_user_session_path, method: :delete
-  -#       = link_to  "投稿する", "/posts/new", class: "post"
-  -#   - else
-  -#     .grid-6
-  -#       = link_to "ログイン", new_user_session_path, class: 'post'
-  -#       = link_to "新規登録", new_user_registration_path, class: 'post'
