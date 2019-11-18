@@ -1,0 +1,7 @@
+.main.posts-show
+  .container-index
+    - @posts.each do |post|
+      .posts-index-item
+        = link_to(post.image, "/posts/#{post.id}")
+
+

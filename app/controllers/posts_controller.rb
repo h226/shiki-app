@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   end 
 
   def create
-    # @post = Post.new(content: params[:content])
+    # @post = Post.new(post: params[:@post])
     # @post.save
     redirect_to("/posts/index")
     Post.create(post_params)
@@ -34,17 +34,21 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
   end
 
-  # def primavera
-  # end
+  def primavera
+    @post = Post.find_by(id: params[:id])
+  end
 
-  # def verano
-  # end
+  def verano
+    @post = Post.find_by(id: params[:id])
+  end
 
-  # def otono
-  # end
+  def otono
+    @post = Post.find_by(id: params[:id])
+  end
 
-  # def invierno
-  # end
+  def invierno
+    @post = Post.find_by(id: params[:id])
+  end
 
   private
   def post_params

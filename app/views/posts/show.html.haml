@@ -1,4 +1,12 @@
 .main.posts-show
-  .container
-    .posts-show-item
-      %p 投稿詳細画面です
+  .container-index
+    - @posts.each do |post|
+      .posts-index-item
+        = link_to("/posts/#{post.id}")
+          .posts-show-item
+          %p
+            = @post.title
+          .post-image
+            = image_tag @image.image_url.to_s if @image.image_url.present?
+          -# = image_tag @post.image_url(:thumb)
+          -# = @post.image
