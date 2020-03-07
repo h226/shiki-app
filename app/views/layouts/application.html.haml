@@ -1,0 +1,29 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title ShikiPhoto
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+.header
+  .header-logo 
+    = link_to "Shiki", "/", class: "top"
+  .about
+    = link_to "Conocer", "/about", class: "about"
+  - if user_signed_in?
+    .user_nav.grid-6
+      = link_to "Logout", destroy_user_session_path, method: :delete, class: "logout"
+      = link_to  "Primavera", "/posts/primavera", class: "post", id: "primavera"
+      = link_to  "Verano", "/posts/verano", class: "post", id: "verano"
+      = link_to  "Otoño", "/posts/otono", class: "post", id: "otono"
+      = link_to  "Invierno", "/posts/invierno", class: "post", id: "invierno"
+  - else
+    .grid-6
+      = link_to "Login", new_user_session_path, class: 'post', id: "login"
+      = link_to "Registrar", new_user_registration_path, class: 'post', id: "register"
+
+= yield
+

@@ -1,0 +1,18 @@
+.contents.row
+  .container-post
+    = form_for :post, url: '/posts/create' do |f|
+      %h3
+        Compartir mi foto
+      = f.text_field :title, placeholder: "Title"
+      -# = f.label :image
+      = f.file_field :image, placeholder: "Image"
+      -# = f.label :category, 'カテゴリ'
+      -# = f.collection_check_boxes(:category_ids, Category.all, :id, :name) do |category|
+      -#   = category.label do
+      -#     = category.check_box
+      -#     = category.text
+      -# = form.text_area :title, placeholder: "title" , rows: "10"
+      = f.submit "SEND"
+      -# = f.label :image, class: 'label' do
+      -# = fa_icon 'picture-o'
+      -# = f.file_field :image, class: 'hoge'

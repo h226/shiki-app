@@ -1,0 +1,9 @@
+.main.posts-show
+  .container
+    .posts-show-item
+      %p
+        = image_tag @post.image
+      .post-title
+        = @post.title
+      .post-time
+        = @post.created_at
